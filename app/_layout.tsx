@@ -1,5 +1,11 @@
 import { Stack } from "expo-router";
-import "../global.css"
+import { KeyboardProvider } from "react-native-keyboard-controller";
+import "../global.css";
+
 export default function RootLayout() {
-  return <Stack />;
+  return (
+    <KeyboardProvider>
+      <Stack />
+    </KeyboardProvider>
+  );
 }
